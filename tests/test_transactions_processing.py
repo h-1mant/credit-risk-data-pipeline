@@ -9,7 +9,7 @@ def spark():
     spark = SparkSession \
         .builder \
         .appName("pyspark-unit-test") \
-        .master("local[*]")
+        .master("local[*]") \
         .getOrCreate()
     
     return spark
