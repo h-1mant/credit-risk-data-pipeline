@@ -8,15 +8,16 @@ import uuid
 
 default_args = {
     "owner": "airflow",
+    'depends_on_past': False,
     "retries": 1,
-    "retry_interval": timedelta(seconds=5),
-    "schedule_interval": None
+    "retry_delay": timedelta(seconds=5),
+    "start_date": datetime(2025,12,23)
 }
 
 with DAG(
     dag_id = "credit-risk-data-pipeline",
     default_args = default_args,
-    start_date = datetime(2025,12,23), 
+    schedule_interval = None,
     catchup=False
 ) as dag:
 
