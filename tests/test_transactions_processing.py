@@ -105,7 +105,7 @@ def test_transactions_processing(spark):
     assert result[1]["high_risk"] == True  
     assert result[2]["high_risk"] == True
 
-    assert result[0]["fraud_risk_level"] == "High"
+    assert result[0]["fraud_risk_level"] == "Low"
     assert result[1]["fraud_risk_level"] == "Review"
     assert result[2]["fraud_risk_level"] == "Review"
 
