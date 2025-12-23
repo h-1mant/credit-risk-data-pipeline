@@ -10,6 +10,7 @@ def spark():
         .builder \
         .appName("pyspark-unit-test") \
         .master("local[*]")
+        .getOrCreate()
     
     return spark
 
