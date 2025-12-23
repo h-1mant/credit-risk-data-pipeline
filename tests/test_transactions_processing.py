@@ -94,7 +94,7 @@ def test_transactions_processing(spark):
         )
     )
 
-    # 7. Assertions: Verify Transformations
+    #7. Assertions: Verify Transformations
     result = enriched_df.select("transaction_id", "transaction_category", "high_risk", "fraud_risk_level", "updated_reward_points").collect()
 
     assert result[0]["transaction_category"] == "Low"     
