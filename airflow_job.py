@@ -23,7 +23,7 @@ with DAG(
 
     #Task 1: Sense Files in GCS Bucket to trigger spark job
     gcs_bucket = "credit-card-data-analysis-hrm2934"
-    file_pattern = "transactions/transactions_*.json"
+    file_pattern = "transactions/transactions_"
 
     file_sensor_task = GCSObjectsWithPrefixExistenceSensor(
         task_id = "check_transaction_file_arrival",
