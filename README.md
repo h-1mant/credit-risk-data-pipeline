@@ -6,7 +6,7 @@ Build a data pipeline to ingest daily transaction data, enrich it with static ca
 ---
 
 ## Architecture
-![Architecture Diagram](img/path/to/architecture.png)
+![Architecture Diagram](architecture.png)
 
 **Flow Overview**
 - Static cardholder data stored in BigQuery
